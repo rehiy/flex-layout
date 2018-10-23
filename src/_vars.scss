@@ -1,0 +1,54 @@
+$flex-media: (
+    xs: (min: null, max: 599px),
+    sm: (min: 600px, max: 959px),
+    md: (min: 960px, max: 1279px),
+    lg: (min: 1280px, max: 1919px),
+    xl: (min: 1920px, max: null)
+);
+
+@mixin media-cols($media) {
+
+    @if $media {
+        $media: #{$media}-;
+    }
+
+    .flex-#{$media}auto { flex:auto;  }
+    .flex-#{$media}show { display: flex; }
+    .flex-#{$media}hide { display: none; }
+
+    @for $i from 12 through 1 {
+        .flex-#{$media}#{$i} { flex: 0 0 percentage($i/12); }
+    }
+
+}
+
+@mixin responsive-cols {
+
+    @include media-cols(null);
+
+    @each $media, $size in $flex-media {
+
+        $max: map-get($size, max);
+        $min: map-get($size, min);
+
+        @if $max == null {
+            @media (min-width: #{$min}) {
+                @include media-cols($media);
+            }
+        }
+
+        @else if $min == null {
+            @media (max-width: #{$max}) {
+                @include media-cols($media);
+            }
+        }
+
+        @else {
+            @media (min-width: #{$min}) and (max-width: #{$max}) {
+                @include media-cols($media);
+            }
+        }
+
+    }
+
+}
