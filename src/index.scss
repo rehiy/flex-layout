@@ -1,0 +1,8 @@
+@import 'include/media-cols';
+
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+
+    @include media-cols;
+}
