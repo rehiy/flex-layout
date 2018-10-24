@@ -26,10 +26,10 @@ $flex-media: (
 
     @include media-cols(null);
 
-    @each $media, $size in $flex-media {
+    @each $media, $range in $flex-media {
 
-        $max: map-get($size, max);
-        $min: map-get($size, min);
+        $max: map-get($range, max);
+        $min: map-get($range, min);
 
         @if $max == null {
             @media (min-width: #{$min}) {
