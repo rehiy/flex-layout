@@ -5,6 +5,8 @@
     flex-wrap: wrap;
     flex-direction: row;
 
+    // 定义空白间隔方式
+
     &.flex-around {
         justify-content: space-around;
     }
@@ -12,6 +14,8 @@
     &.flex-between {
         justify-content: space-between;
     }
+
+    // 定义水平对齐方式
 
     &.flex-top {
         justify-content: flex-start;
@@ -24,6 +28,8 @@
     &.flex-bottom {
         justify-content: flex-end;
     }
+
+    // 定义垂直对齐方式
 
     &.flex-left {
         align-items: flex-start;

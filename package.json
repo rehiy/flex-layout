@@ -1,5 +1,5 @@
 {
-    "name": "css-flex-layout",
+    "name": "flex-rwd",
     "version": "0.1.1",
     "author": {
         "name": "Anrip Wong",
@@ -7,9 +7,10 @@
         "url": "http://www.anrip.com/"
     },
     "homepage": "https://github.com/anrip/flex-layout#readme",
-    "description": "Responsive layout by css flex",
+    "description": "Responsive web design by css flex",
     "license": "Apache License Version 2.0",
     "keywords": [
+        "css",
         "flex",
         "responsive",
         "layout"
@@ -23,7 +24,7 @@
     },
     "scripts": {
         "start": "node-sass --output-style expanded --output public --watch src/index.scss",
-        "build": "node-sass --output-style compressed --output public src/flex.scss"
+        "build": "node-sass --output-style compressed --output public src/index.scss"
     },
     "devDependencies": {
         "node-sass": "^4.9.0"
