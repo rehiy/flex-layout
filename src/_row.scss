@@ -1,0 +1,42 @@
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+
+    // 定义空白间隔方式
+
+    &.flex-around {
+        justify-content: space-around;
+    }
+
+    &.flex-between {
+        justify-content: space-between;
+    }
+
+    // 定义主轴对齐方式-水平
+
+    &.flex-top {
+        justify-content: flex-start;
+    }
+
+    &.flex-middle {
+        justify-content: center;
+    }
+
+    &.flex-bottom {
+        justify-content: flex-end;
+    }
+
+    // 定义交叉轴对齐方式-垂直
+
+    &.flex-left {
+        align-items: flex-start;
+    }
+
+    &.flex-center {
+        align-items: center;
+    }
+
+    &.flex-right {
+        align-items: flex-end;
+    }
+}

@@ -1,47 +1,5 @@
+@import '_col.scss';
+@import '_row.scss';
+
 @import '_vars.scss';
-
-.flex-row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-
-    // 定义空白间隔方式
-
-    &.flex-around {
-        justify-content: space-around;
-    }
-
-    &.flex-between {
-        justify-content: space-between;
-    }
-
-    // 定义水平对齐方式
-
-    &.flex-top {
-        justify-content: flex-start;
-    }
-
-    &.flex-middle {
-        justify-content: center;
-    }
-
-    &.flex-bottom {
-        justify-content: flex-end;
-    }
-
-    // 定义垂直对齐方式
-
-    &.flex-left {
-        align-items: flex-start;
-    }
-
-    &.flex-center {
-        align-items: center;
-    }
-
-    &.flex-right {
-        align-items: flex-end;
-    }
-}
-
-@include responsive-cols;
+@include flex-media-query();

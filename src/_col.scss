@@ -1,0 +1,48 @@
+.flex-column {
+    display: flex;
+    flex-flow: column wrap;
+
+    // 定义换行属性
+
+    &.flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    // 定义空白间隔方式
+
+    &.flex-around {
+        justify-content: space-around;
+    }
+
+    &.flex-between {
+        justify-content: space-between;
+    }
+
+    // 定义主轴对齐方式-垂直
+
+    &.flex-top {
+        align-items: flex-start;
+    }
+
+    &.flex-middle {
+        align-items: center;
+    }
+
+    &.flex-bottom {
+        align-items: flex-end;
+    }
+
+    // 定义交叉轴对齐方式-水平
+
+    &.flex-left {
+        justify-content: flex-start;
+    }
+
+    &.flex-center {
+        justify-content: center;
+    }
+
+    &.flex-right {
+        justify-content: flex-end;
+    }
+}
