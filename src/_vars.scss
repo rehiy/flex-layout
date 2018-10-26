@@ -6,16 +6,6 @@ $media-range: (
     xl: (min: 1920px, max: null)
 );
 
-@mixin hide-builder($media) {
-
-    @if $media {
-        $media: -#{$media};
-    }
-
-    .hide#{$media} { display: none; }
-
-}
-
 @mixin flex-builder($media) {
 
     @if $media {
@@ -30,10 +20,20 @@ $media-range: (
 
 }
 
+@mixin hide-builder($media) {
+
+    @if $media {
+        $media: -#{$media};
+    }
+
+    .hide#{$media} { display: none; }
+
+}
+
 @mixin build-style ($media) {
 
-    @include hide-builder($media);
     @include flex-builder($media);
+    @include hide-builder($media);
 
 }
 
