@@ -12,10 +12,18 @@ $media-range: (
         $media: #{$media}-;
     }
 
+    .flex-#{$media}avg { flex: 1; }
     .flex-#{$media}auto { flex: auto; }
 
+    .flex-#{$media}around { justify-content: space-around; }
+    .flex-#{$media}between { justify-content: space-between; }
+
     @for $i from 12 through 1 {
-        .flex-#{$media}#{$i} { flex: 0 0 percentage($i/12); }
+        $w: percentage($i/12);
+        .flex-#{$media}#{$i} { width: $w; }
+        .flex-#{$media}space-1x .flex-#{$media}#{$i} { width: calc(#{$w} - 8px); }
+        .flex-#{$media}space-2x .flex-#{$media}#{$i} { width: calc(#{$w} - 16px); }
+        .flex-#{$media}space-3x .flex-#{$media}#{$i} { width: calc(#{$w} - 24px); }
     }
 
 }

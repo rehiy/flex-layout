@@ -1,16 +1,7 @@
 .flex-row {
     display: flex;
     flex-flow: row wrap;
-
-    // 定义空白间隔方式
-
-    &.flex-around {
-        justify-content: space-around;
-    }
-
-    &.flex-between {
-        justify-content: space-between;
-    }
+    overflow: hidden;
 
     // 定义主轴对齐方式-水平
 
