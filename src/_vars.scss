@@ -37,9 +37,9 @@ $media-range: (
 
 }
 
-@mixin build-media-style() {
+@mixin build-media-style($pre: null) {
 
-    @include build-style(null);
+    @include build-style($pre);
 
     @each $media, $range in $media-range {
 
