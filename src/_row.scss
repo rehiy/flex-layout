@@ -14,29 +14,29 @@
 
     // 定义主轴对齐方式-水平
 
-    &.flex-top {
+    &.flex-left {
         justify-content: flex-start;
     }
 
-    &.flex-middle {
+    &.flex-center {
         justify-content: center;
     }
 
-    &.flex-bottom {
+    &.flex-right {
         justify-content: flex-end;
     }
 
     // 定义交叉轴对齐方式-垂直
 
-    &.flex-left {
+    &.flex-top {
         align-items: flex-start;
     }
 
-    &.flex-center {
+    &.flex-middle {
         align-items: center;
     }
 
-    &.flex-right {
+    &.flex-bottom {
         align-items: flex-end;
     }
 }

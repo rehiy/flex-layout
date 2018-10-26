@@ -21,28 +21,28 @@
     // 定义主轴对齐方式-垂直
 
     &.flex-top {
-        align-items: flex-start;
+        justify-content: flex-start;
     }
 
     &.flex-middle {
-        align-items: center;
+        justify-content: center;
     }
 
     &.flex-bottom {
-        align-items: flex-end;
+        justify-content: flex-end;
     }
 
     // 定义交叉轴对齐方式-水平
 
     &.flex-left {
-        justify-content: flex-start;
+        align-items: flex-start;
     }
 
     &.flex-center {
-        justify-content: center;
+        align-items: center;
     }
 
     &.flex-right {
-        justify-content: flex-end;
+        align-items: flex-end;
     }
 }
