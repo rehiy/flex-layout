@@ -1,4 +1,4 @@
-$flex-media: (
+$media-range: (
     xs: (min: null, max: 599px),
     sm: (min: 600px, max: 959px),
     md: (min: 960px, max: 1279px),
@@ -6,15 +6,23 @@ $flex-media: (
     xl: (min: 1920px, max: null)
 );
 
-@mixin flex-items($media) {
+@mixin hide-builder($media) {
+
+    @if $media {
+        $media: -#{$media};
+    }
+
+    .hide#{$media} { display: none; }
+
+}
+
+@mixin flex-builder($media) {
 
     @if $media {
         $media: #{$media}-;
     }
 
-    .flex-#{$media}auto { flex:auto;  }
-    .flex-#{$media}show { display: flex; }
-    .flex-#{$media}hide { display: none; }
+    .flex-#{$media}auto { flex: auto; }
 
     @for $i from 12 through 1 {
         .flex-#{$media}#{$i} { flex: 0 0 percentage($i/12); }
@@ -22,30 +30,37 @@ $flex-media: (
 
 }
 
-@mixin flex-media-query {
+@mixin build-style ($media) {
 
-    @include flex-items(null);
+    @include hide-builder($media);
+    @include flex-builder($media);
 
-    @each $media, $range in $flex-media {
+}
+
+@mixin build-media-style() {
+
+    @include build-style(null);
+
+    @each $media, $range in $media-range {
 
         $max: map-get($range, max);
         $min: map-get($range, min);
 
         @if $max == null {
             @media (min-width: #{$min}) {
-                @include flex-items($media);
+                @include build-style($media);
             }
         }
 
         @else if $min == null {
             @media (max-width: #{$max}) {
-                @include flex-items($media);
+                @include build-style($media);
             }
         }
 
         @else {
             @media (min-width: #{$min}) and (max-width: #{$max}) {
-                @include flex-items($media);
+                @include build-style($media);
             }
         }
 
