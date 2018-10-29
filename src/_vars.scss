@@ -9,39 +9,59 @@ $media-range: (
 @mixin flex-builder($media) {
 
     @if $media {
-        $media: #{$media}-;
+        $media: -#{$media};
     }
 
-    .flex-#{$media}avg { flex: 1; }
-    .flex-#{$media}auto { flex: auto; }
+    .flex#{$media}-avg { flex: 1; }
+    .flex#{$media}-auto { flex: auto; }
 
-    .flex-#{$media}around { justify-content: space-around; }
-    .flex-#{$media}between { justify-content: space-between; }
+    .flex#{$media}-around { justify-content: space-around; }
+    .flex#{$media}-between { justify-content: space-between; }
 
     @for $i from 12 through 1 {
-        $w: percentage($i/12);
-        .flex-#{$media}#{$i} { width: $w; }
-        .flex-#{$media}space-1x .flex-#{$media}#{$i} { width: calc(#{$w} - 8px); }
-        .flex-#{$media}space-2x .flex-#{$media}#{$i} { width: calc(#{$w} - 16px); }
-        .flex-#{$media}space-3x .flex-#{$media}#{$i} { width: calc(#{$w} - 24px); }
+        .flex#{$media}-#{$i} { width: percentage($i/12); }
     }
 
 }
 
-@mixin hide-builder($media) {
+@mixin space-builder($media) {
 
     @if $media {
         $media: -#{$media};
     }
 
-    .hide#{$media} { display: none; }
+    @for $h from 3 through 1 {
+        $x: $h * 8;
+
+        .space#{$media}-#{$h} { margin-bottom: -#{$x}px; }
+        .space#{$media}-#{$h} > .flex#{$media}-12 { margin-bottom: #{$x}px; }
+
+        @for $i from 11 through 1 {
+            .space#{$media}-#{$h} > .flex#{$media}-#{$i} {
+                width: calc(#{percentage($i/12)} - #{$x}px);
+                margin-bottom: #{$x}px;
+            }
+        }
+
+    }
+
+}
+
+@mixin hidden-builder($media) {
+
+    @if $media {
+        $media: -#{$media};
+    }
+
+    .hidden#{$media} { display: none; }
 
 }
 
 @mixin build-style ($media) {
 
     @include flex-builder($media);
-    @include hide-builder($media);
+    @include space-builder($media);
+    @include hidden-builder($media);
 
 }
 
