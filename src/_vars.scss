@@ -38,8 +38,11 @@ $media-range: (
         $x: $h * 8;
 
         .space#{$media}-#{$h} {
-            margin-bottom: -#{$x}px;
             justify-content: space-between;
+
+            &.space-fix {
+                margin-bottom: -#{$x}px;
+            }
 
             & > [class*=flex#{$media}] {
                 margin-bottom: #{$x}px;
