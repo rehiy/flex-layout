@@ -12,14 +12,18 @@ $media-range: (
         $media: -#{$media};
     }
 
-    .flex#{$media}-avg { flex: 1; }
-    .flex#{$media}-auto { flex: auto; }
+    .flex#{$media}-avg {
+        flex: 1;
+    }
 
-    .flex#{$media}-around { justify-content: space-around; }
-    .flex#{$media}-between { justify-content: space-between; }
+    .flex#{$media}-auto {
+        flex: auto;
+    }
 
     @for $i from 12 through 1 {
-        .flex#{$media}-#{$i} { width: percentage($i/12); }
+        .flex#{$media}-#{$i} {
+            width: percentage($i/12);
+        }
     }
 
 }
@@ -33,13 +37,18 @@ $media-range: (
     @for $h from 3 through 1 {
         $x: $h * 8;
 
-        .space#{$media}-#{$h} { margin-bottom: -#{$x}px; }
-        .space#{$media}-#{$h} > .flex#{$media}-12 { margin-bottom: #{$x}px; }
+        .space#{$media}-#{$h} {
+            margin-bottom: -#{$x}px;
+            justify-content: space-between;
 
-        @for $i from 11 through 1 {
-            .space#{$media}-#{$h} > .flex#{$media}-#{$i} {
-                width: calc(#{percentage($i/12)} - #{$x}px);
+            & > [class*=flex#{$media}] {
                 margin-bottom: #{$x}px;
+            }
+
+            @for $i from 12 through 1 {
+                & > .flex#{$media}-#{$i} {
+                    width: calc(#{percentage($i/12)} - #{$x*(1-$i/12)}px);
+                }
             }
         }
 
@@ -53,7 +62,9 @@ $media-range: (
         $media: -#{$media};
     }
 
-    .hidden#{$media} { display: none; }
+    .hidden#{$media} {
+        display: none;
+    }
 
 }
 
