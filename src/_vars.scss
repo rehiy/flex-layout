@@ -34,7 +34,7 @@ $media-range: (
         $media: -#{$media};
     }
 
-    @for $h from 3 through 1 {
+    @for $h from 4 through 1 {
         $x: $h * 8;
 
         .space#{$media}-#{$h} {
