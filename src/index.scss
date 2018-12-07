@@ -5,6 +5,11 @@
  * @license: MIT License
  */
 
+.flex {
+    display: flex;
+    overflow: hidden;
+}
+
 @import '_col.scss';
 @import '_row.scss';
 
