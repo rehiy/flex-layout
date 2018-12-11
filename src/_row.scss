@@ -1,33 +1,50 @@
-.flex-row {
-    display: flex;
-    flex-flow: row wrap;
-    overflow: hidden;
+@import '_vars.scss';
 
-    // 定义主轴对齐方式-水平
 
-    &.flex-left {
-        justify-content: flex-start;
+@mixin row-layout($media-range) {
+
+    .flex {
+        display: flex;
+        overflow: hidden;
+        @include output-style(null);
     }
 
-    &.flex-center {
-        justify-content: center;
+    .flex-row {
+        display: flex;
+        flex-flow: row wrap;
+        overflow: hidden;
+
+        // 定义主轴对齐方式-水平
+
+        &.flex-left {
+            justify-content: flex-start;
+        }
+
+        &.flex-center {
+            justify-content: center;
+        }
+
+        &.flex-right {
+            justify-content: flex-end;
+        }
+
+        // 定义交叉轴对齐方式-垂直
+
+        &.flex-top {
+            align-items: flex-start;
+        }
+
+        &.flex-middle {
+            align-items: center;
+        }
+
+        &.flex-bottom {
+            align-items: flex-end;
+        }
+
+        // 采用12等分法定义列宽和间距
+
+        @include output-style-media($media-range);
     }
 
-    &.flex-right {
-        justify-content: flex-end;
-    }
-
-    // 定义交叉轴对齐方式-垂直
-
-    &.flex-top {
-        align-items: flex-start;
-    }
-
-    &.flex-middle {
-        align-items: center;
-    }
-
-    &.flex-bottom {
-        align-items: flex-end;
-    }
 }

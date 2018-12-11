@@ -5,14 +5,13 @@
  * @license: MIT License
  */
 
-.flex {
-    display: flex;
-    overflow: hidden;
-}
-
 @import '_col.scss';
 @import '_row.scss';
 
-@import '_vars.scss';
+$media-range: (
+    sm: (min: null, max: 959px),
+    lg: (min: 960px, max: null)
+);
 
-@include build-media-style();
+@include column-layout($media-range);
+@include row-layout($media-range);

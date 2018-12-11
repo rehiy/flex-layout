@@ -1,33 +1,40 @@
-.flex-column {
-    display: flex;
-    flex-flow: column wrap;
-    overflow: hidden;
+@import '_vars.scss';
 
-    // 定义主轴对齐方式-垂直
 
-    &.flex-top {
-        justify-content: flex-start;
+@mixin column-layout($media-range) {
+
+    .flex-column {
+        display: flex;
+        flex-flow: column wrap;
+        overflow: hidden;
+
+        // 定义主轴对齐方式-垂直
+
+        &.flex-top {
+            justify-content: flex-start;
+        }
+
+        &.flex-middle {
+            justify-content: center;
+        }
+
+        &.flex-bottom {
+            justify-content: flex-end;
+        }
+
+        // 定义交叉轴对齐方式-水平
+
+        &.flex-left {
+            align-items: flex-start;
+        }
+
+        &.flex-center {
+            align-items: center;
+        }
+
+        &.flex-right {
+            align-items: flex-end;
+        }
     }
 
-    &.flex-middle {
-        justify-content: center;
-    }
-
-    &.flex-bottom {
-        justify-content: flex-end;
-    }
-
-    // 定义交叉轴对齐方式-水平
-
-    &.flex-left {
-        align-items: flex-start;
-    }
-
-    &.flex-center {
-        align-items: center;
-    }
-
-    &.flex-right {
-        align-items: flex-end;
-    }
 }
