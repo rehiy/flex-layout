@@ -1,6 +1,6 @@
 {
     "name": "flex-rwd",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "author": {
         "name": "Anrip Wong",
         "email": "mail@anrip.com",
@@ -23,9 +23,9 @@
         "url": "https://github.com/anrip/flex-layout/issues"
     },
     "scripts": {
-        "build": "node-sass --output-style compressed --output dist src/all.scss",
-        "build-smlg": "node-sass --output-style compressed --output dist src/smlg.scss",
-        "start": "node-sass --output-style expanded --output dist --watch src/all.scss"
+        "build": "node-sass --output-style compressed --output dist src/main.scss",
+        "build:base": "node-sass --output-style compressed --output dist src/base.scss",
+        "start": "node-sass --output-style expanded --output dist --watch src/main.scss"
     },
     "devDependencies": {
         "node-sass": "^4.9.0"
