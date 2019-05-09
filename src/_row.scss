@@ -5,8 +5,11 @@
 
     .flex {
         display: flex;
-        flex-flow: row wrap;
         overflow: hidden;
+
+        &.flex-wrap {
+            flex-wrap: wrap;
+        }
 
         // 定义主轴对齐方式-水平
 
