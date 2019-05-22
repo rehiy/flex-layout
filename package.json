@@ -24,7 +24,7 @@
     },
     "scripts": {
         "build": "node-sass --output-style compressed --output dist src/main.scss",
-        "build:base": "node-sass --output-style compressed --output dist src/base.scss",
+        "prebuild": "node-sass --output-style compressed --output dist src/base.scss",
         "start": "node-sass --output-style expanded --output dist --watch src/main.scss"
     },
     "devDependencies": {
