@@ -1,6 +1,6 @@
 {
     "name": "flex-rwd",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "author": {
         "name": "Anrip Wong",
         "email": "mail@anrip.com",
@@ -28,6 +28,6 @@
         "start": "node-sass --output-style expanded --output dist --watch src/main.scss"
     },
     "devDependencies": {
-        "node-sass": "^4.9.0"
+        "node-sass": "^4.12.0"
     }
 }

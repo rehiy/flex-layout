@@ -24,18 +24,20 @@
         &.space#{$media}-#{$h} {
             justify-content: space-between;
 
+            @for $i from 12 through 1 {
+                & > .flex#{$media}-#{$i} {
+                    width: calc(#{percentage($i/12)} - #{$x*(1-$i/12)}px);
+                }
+            }
+        }
+
+        &.flex-wrap.space#{$media}-#{$h} {
             &.space-fix {
                 margin-bottom: -#{$x}px;
             }
 
             & > [class*=flex#{$media}] {
                 margin-bottom: #{$x}px;
-            }
-
-            @for $i from 12 through 1 {
-                & > .flex#{$media}-#{$i} {
-                    width: calc(#{percentage($i/12)} - #{$x*(1-$i/12)}px);
-                }
             }
         }
 
