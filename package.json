@@ -23,9 +23,9 @@
         "url": "https://github.com/anrip/flex-layout/issues"
     },
     "scripts": {
-        "build": "node-sass --output-style compressed --output dist src/main.scss",
-        "prebuild": "node-sass --output-style compressed --output dist src/base.scss",
-        "start": "node-sass --output-style expanded --output dist --watch src/main.scss"
+        "build": "node-sass --output-style compressed --output public src/main.scss",
+        "prebuild": "node-sass --output-style compressed --output public src/base.scss",
+        "start": "node-sass --output-style expanded --output public --watch src/main.scss"
     },
     "devDependencies": {
         "node-sass": "^4.12.0"
