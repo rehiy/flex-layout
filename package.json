@@ -1,14 +1,14 @@
 {
     "name": "flex-rwd",
-    "version": "1.2.0",
+    "description": "Responsive web design by css flex",
+    "homepage": "https://github.com/anrip/flex-layout",
+    "version": "1.3.0",
+    "license": "MIT License",
     "author": {
         "name": "Anrip Wong",
         "email": "mail@anrip.com",
         "url": "http://www.anrip.com/"
     },
-    "homepage": "https://github.com/anrip/flex-layout#readme",
-    "description": "Responsive web design by css flex",
-    "license": "MIT License",
     "keywords": [
         "css",
         "flex",
@@ -19,15 +19,10 @@
         "type": "git",
         "url": "git+https://github.com/anrip/flex-layout.git"
     },
-    "bugs": {
-        "url": "https://github.com/anrip/flex-layout/issues"
-    },
     "scripts": {
-        "build": "node-sass --output-style compressed --output public src/main.scss",
-        "prebuild": "node-sass --output-style compressed --output public src/base.scss",
-        "start": "node-sass --output-style expanded --output public --watch src/main.scss"
+        "build": "node scripts/build.js"
     },
     "devDependencies": {
-        "node-sass": "^4.12.0"
+        "sass": "^1.23.0-module.beta.1"
     }
 }
