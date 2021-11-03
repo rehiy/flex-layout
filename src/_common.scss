@@ -1,13 +1,5 @@
 @mixin item-builder($media) {
 
-    & > .flex#{$media}-avg {
-        flex: 1;
-    }
-
-    & > .flex#{$media}-auto {
-        flex: auto;
-    }
-
     @for $i from 12 through 1 {
         & > .flex#{$media}-#{$i} {
             width: percentage($i/12);

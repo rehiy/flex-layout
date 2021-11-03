@@ -7,38 +7,6 @@
         display: flex;
         overflow: hidden;
 
-        &.flex-wrap {
-            flex-wrap: wrap;
-        }
-
-        // 定义主轴对齐方式-水平
-
-        &.flex-left {
-            justify-content: flex-start;
-        }
-
-        &.flex-center {
-            justify-content: center;
-        }
-
-        &.flex-right {
-            justify-content: flex-end;
-        }
-
-        // 定义交叉轴对齐方式-垂直
-
-        &.flex-top {
-            align-items: flex-start;
-        }
-
-        &.flex-middle {
-            align-items: center;
-        }
-
-        &.flex-bottom {
-            align-items: flex-end;
-        }
-
         // 采用12等分法定义列宽和间距
 
         @include output-style(null);
@@ -46,6 +14,62 @@
         @if $media-range {
             @include output-style-media($media-range);
         }
+    }
+
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    .flex-avg {
+        flex: 1;
+    }
+
+    .flex-auto {
+        flex: auto;
+    }
+
+    // 定义主轴对齐方式-水平
+
+    .flex-left {
+        justify-content: flex-start;
+    }
+
+    .flex-center {
+        justify-content: center;
+    }
+
+    .flex-right {
+        justify-content: flex-end;
+    }
+
+    .flex-around {
+        justify-content: space-around;
+    }
+
+    .flex-between {
+        justify-content: space-between;
+    }
+
+    .flex-evenly {
+        justify-content: space-evenly;
+    }
+
+    // 定义交叉轴对齐方式-垂直
+
+    .flex-top {
+        align-items: flex-start;
+    }
+
+    .flex-middle {
+        align-items: center;
+    }
+
+    .flex-bottom {
+        align-items: flex-end;
+    }
+
+    .flex-baseline {
+        align-items: baseline;
     }
 
 }
