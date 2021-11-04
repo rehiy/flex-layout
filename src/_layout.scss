@@ -16,16 +16,16 @@
         }
     }
 
-    .flex-wrap {
-        flex-wrap: wrap;
-    }
-
     .flex-avg {
         flex: 1;
     }
 
     .flex-auto {
         flex: auto;
+    }
+
+    .flex-wrap {
+        flex-wrap: wrap;
     }
 
     // 定义主轴对齐方式-水平
