@@ -1,12 +1,12 @@
 {
     "name": "flex-rwd",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "author": {
-        "name": "Anrip Wong",
-        "email": "mail@anrip.com",
-        "url": "http://www.anrip.com/"
+        "name": "rehiy Wong",
+        "email": "wang@rehiy.com",
+        "url": "http://www.rehiy.com/"
     },
-    "homepage": "https://github.com/anrip/flex-layout#readme",
+    "homepage": "https://github.com/rehiy/flex-layout#readme",
     "description": "Responsive web design by css flex",
     "license": "MIT License",
     "keywords": [
@@ -17,9 +17,9 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/anrip/flex-layout.git"
+        "url": "git+https://github.com/rehiy/flex-layout.git"
     },
     "bugs": {
-        "url": "https://github.com/anrip/flex-layout/issues"
+        "url": "https://github.com/rehiy/flex-layout/issues"
     }
 }
