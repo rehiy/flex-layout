@@ -23,6 +23,6 @@
         "build": "node scripts/build.js"
     },
     "devDependencies": {
-        "sass": "^1.23.0-module.beta.1"
+        "sass": "^1.57.0"
     }
 }

@@ -1,8 +1,10 @@
 @mixin item-builder($media) {
 
     @for $i from 12 through 1 {
+        $ii: calc($i/12);
+
         & > .flex#{$media}-#{$i} {
-            width: percentage($i/12);
+            width: percentage($ii);
         }
     }
 
@@ -17,8 +19,10 @@
             justify-content: space-between;
 
             @for $i from 12 through 1 {
+                $ii: calc($i/12);
+
                 & > .flex#{$media}-#{$i} {
-                    width: calc(#{percentage($i/12)} - #{$x*(1-$i/12)}px);
+                    width: calc(#{percentage($ii)} - #{$x*(1-$ii)}px);
                 }
             }
         }
